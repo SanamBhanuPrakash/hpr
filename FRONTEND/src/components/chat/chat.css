@@ -1,0 +1,35 @@
+/* Small set of keyframes Tailwind's utility classes can't express directly.
+   Everything else in the chat widget uses Tailwind classes, consistent with
+   the rest of this codebase. */
+
+@keyframes sog-chat-pop {
+  from { transform: scale(0) rotate(-90deg); opacity: 0; }
+  to   { transform: scale(1) rotate(0); opacity: 1; }
+}
+.sog-chat-launcher-pop {
+  animation: sog-chat-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s both;
+}
+
+@keyframes sog-chat-bounce {
+  0%, 60%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-6px); }
+}
+.sog-chat-typing-dot {
+  animation: sog-chat-bounce 1.2s ease-in-out infinite;
+}
+
+@keyframes sog-chat-msg-in {
+  from { opacity: 0; transform: translateY(10px) scale(0.98); }
+  to   { opacity: 1; transform: none; }
+}
+.sog-chat-msg-in {
+  animation: sog-chat-msg-in 0.28s cubic-bezier(0.34, 1.2, 0.64, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sog-chat-launcher-pop,
+  .sog-chat-typing-dot,
+  .sog-chat-msg-in {
+    animation: none !important;
+  }
+}

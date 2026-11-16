@@ -1,0 +1,2 @@
+Shades[[:space:]]of[[:space:]]green[[:space:]]brochure[[:space:]]08.09.26.pdf filter=lfs diff=lfs merge=lfs -text
+FRONTEND/public/brochure.pdf filter=lfs diff=lfs merge=lfs -text

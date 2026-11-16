@@ -1,0 +1,294 @@
+<section className="bg-white py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                {/* Real Estate Development Layout and Plan */}
+                Master Plan
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto mb-6">
+                Master plan view is indicative. The final updated plan will be
+                shared once finalised.
+              </p>
+              <button
+                onClick={() => setShowPopup(true)}
+                className="px-8 py-3 bg-[#1A4744] text-white rounded-lg hover:bg-emerald-700 transition-colors font-semibold"
+              >
+                Request Latest Master Plan
+              </button>
+            </div>
+
+            {/* Image Card */}
+            <div className="relative rounded-2xl overflow-hidden shadow-xl bg-white">
+              <div className="flex items-center justify-center bg-gray-50">
+                <img
+                  src="/images/Plan.png"
+                  alt="Master Plan Layout"
+                  className="
+            max-h-[420px]
+            w-auto
+            object-contain
+            mx-auto
+            py-6
+          "
+                />
+              </div>
+            </div>
+          </div>
+        </section> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Anmeties 
+ <section
+          id="amenities"
+          className="bg-gradient-to-b from-white to-gray-50 py-16"
+        >
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <p className="text-emerald-600 text-sm font-semibold tracking-wider uppercase mb-2">
+                AMENITIES
+              </p>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Amenities That Make Everyday Villa Living Better
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                A balanced mix of wellness, play, sports, and community spaces
+                designed for all age groups.
+              </p>
+            </div>
+
+            <div className="relative">
+              {/* <div className="overflow-hidden">
+                <div className="flex gap-0">
+                  <div className="flex-shrink-0 w-full md:w-1/2 lg:w-1/4 bg-white p-10 text-center group hover:bg-gradient-to-br hover:from-emerald-500 hover:to-emerald-600 transition-all duration-300">
+                    <div className="mb-6">
+                      <Armchair className="w-16 h-16 mx-auto text-emerald-600 group-hover:text-white transition-colors duration-300" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-800 group-hover:text-white mb-3 transition-colors duration-300">
+                      Clubhouse
+                    </h3>
+                    <p className="text-gray-600 group-hover:text-white/90 leading-relaxed transition-colors duration-300">
+                      Social, fitness, and community time in one place.
+                    </p>
+                  </div>
+
+                  <div className="flex-shrink-0 w-full md:w-1/2 lg:w-1/4 bg-white p-10 text-center group hover:bg-gradient-to-br hover:from-emerald-500 hover:to-emerald-600 transition-all duration-300">
+                    <div className="mb-6">
+                      <Target className="w-16 h-16 mx-auto text-emerald-600 group-hover:text-white transition-colors duration-300" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-800 group-hover:text-white mb-3 transition-colors duration-300">
+                      Outdoor Sports
+                    </h3>
+                    <p className="text-gray-600 group-hover:text-white/90 leading-relaxed transition-colors duration-300">
+                      Badminton, pickleball, and a cricket pitch.
+                    </p>
+                  </div>
+
+                  <div className="flex-shrink-0 w-full md:w-1/2 lg:w-1/4 bg-white p-10 text-center group hover:bg-gradient-to-br hover:from-emerald-500 hover:to-emerald-600 transition-all duration-300">
+                    <div className="mb-6">
+                      <Trees className="w-16 h-16 mx-auto text-emerald-600 group-hover:text-white transition-colors duration-300" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-800 group-hover:text-white mb-3 transition-colors duration-300">
+                      Parks for All
+                    </h3>
+                    <p className="text-gray-600 group-hover:text-white/90 leading-relaxed transition-colors duration-300">
+                      Children's park, pet park, reflexology park.
+                    </p>
+                  </div>
+
+                  <div className="flex-shrink-0 w-full md:w-1/2 lg:w-1/4 bg-white p-10 text-center group hover:bg-gradient-to-br hover:from-emerald-500 hover:to-emerald-600 transition-all duration-300">
+                    <div className="mb-6">
+                      <Dumbbell className="w-16 h-16 mx-auto text-emerald-600 group-hover:text-white transition-colors duration-300" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-800 group-hover:text-white mb-3 transition-colors duration-300">
+                      Outdoor Wellness
+                    </h3>
+                    <p className="text-gray-600 group-hover:text-white/90 leading-relaxed transition-colors duration-300">
+                      Outdoor gym and walkways for routine movement.
+                    </p>
+                  </div>
+                </div>
+              </div> */}
+
+              <div className="md:hidden overflow-hidden">
+                <div className="flex w-max gap-4 animate-marquee-mobile">
+                  {[...amenities, ...amenities].map((item, index) => {
+                    const Icon = item.icon;
+                    return (
+                      <div
+                        key={index}
+                        className="w-[280px] flex-shrink-0 bg-white p-8 text-center rounded-2xl shadow-sm"
+                      >
+                        <div className="mb-6">
+                          <Icon className="w-16 h-16 mx-auto text-emerald-600" />
+                        </div>
+                        <h3 className="text-xl font-bold text-gray-800 mb-3">
+                          {item.title}
+                        </h3>
+                        <p className="text-gray-600 leading-relaxed">
+                          {item.desc}
+                        </p>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-0">
+                {amenities.map((item, index) => {
+                  const Icon = item.icon;
+                  return (
+                    <div
+                      key={index}
+                      className="bg-white p-10 text-center group hover:bg-gradient-to-br hover:from-emerald-500 hover:to-emerald-600 transition-all duration-300"
+                    >
+                      <div className="mb-6">
+                        <Icon className="w-16 h-16 mx-auto text-emerald-600 group-hover:text-white transition-colors duration-300" />
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-800 group-hover:text-white mb-3 transition-colors duration-300">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-600 group-hover:text-white/90 leading-relaxed transition-colors duration-300">
+                        {item.desc}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+
+          <style jsx>{`
+            @keyframes marqueeMobile {
+              0% {
+                transform: translateX(0%);
+              }
+              100% {
+                transform: translateX(-50%);
+              }
+            }
+
+            .animate-marquee-mobile {
+              animation: marqueeMobile 10s linear infinite;
+            }
+          `}</style>
+        </section>
+
+
+
+
+about 
+ <section className="bg-gray-50 py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* 50–50 GRID */}
+            <div className="grid gap-12 lg:grid-cols-2 items-start">
+              {/* LEFT CONTENT */}
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-emerald-600 mb-6 leading-tight">
+                  At Shades of Green:
+                  <span className="block text-gray-900">
+                    Built for Space, Privacy, and Everyday Ease
+                  </span>
+                </h2>
+
+                <p className="text-gray-600 leading-relaxed text-base mb-4">
+                  HPR Infra is a Hyderabad-based developer bringing a premium
+                  villa community to North Bengaluru. Shades of Green is planned
+                  as a gated neighbourhood where design decisions support real
+                  daily living, from spacious layouts to clearly defined work
+                  and family zones, backed by integrity-led execution and strong
+                  engineering fundamentals.
+                </p>
+
+                <p className="text-gray-600 leading-relaxed text-base">
+                  The community is shaped as a calm, private sanctuary that
+                  supports balance, comfort, and effortless everyday living.
+                </p>
+              </div>
+
+              {/* RIGHT CONTACT GRID */}
+              <div className="grid grid-cols-2 gap-6 cursor-pointer">
+                {[
+                  {
+                    icon: <Phone className="w-10 h-10 cursor-pointer" />,
+                    label: "Call Us",
+                  },
+                  {
+                    icon: <PlayCircle className="w-10 h-10 cursor-pointer" />,
+                    label: "Project Walkthrough",
+                    link: "#",
+                  },
+                  {
+                    icon: <MapPin className="w-10 h-10 cursor-pointer" />,
+                    label: "Visit Us",
+                    link: "https://maps.app.goo.gl/hR2z3mCcS1pZgVDH8",
+                  },
+                  {
+                    icon: <Download className="w-10 h-10" />,
+                    label: "Download",
+                    button: true,
+                  },
+                ].map((item, idx) => {
+                  if (item.link) {
+                    return (
+                      <a
+                        key={idx}
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex flex-col items-center justify-center gap-3 p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow text-center min-h-[160px] cursor-pointer"
+                      >
+                        <div className="text-[#1A4744]">{item.icon}</div>
+
+                        <span className="text-sm font-semibold text-gray-900">
+                          {item.label}
+                        </span>
+                      </a>
+                    );
+                  }
+
+                  return (
+                    <div
+                      key={idx}
+                      className="flex flex-col items-center justify-center gap-3 p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow text-center min-h-[160px]"
+                    >
+                      <div className="text-[#1A4744]">{item.icon}</div>
+
+                      <span className="text-sm font-semibold text-gray-900">
+                        {item.label}
+                      </span>
+
+                      {item.button ? (
+                        <button
+                          type="button"
+                          className="mt-2 px-6 py-3 bg-[#1A4744] text-white font-semibold rounded-full hover:bg-emerald-700 transition-colors text-sm"
+                        >
+                          Download Brochure
+                        </button>
+                      ) : (
+                        <span className="text-xs text-gray-700 leading-snug max-w-[34ch]">
+                          {item.info}
+                        </span>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </section>
